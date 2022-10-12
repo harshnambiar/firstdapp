@@ -1,0 +1,35 @@
+{
+	"contracts": {
+		"HelloWorld": "./contracts/HelloWorld.cdc",
+		"SecondaryContract": "./contracts/SecondaryContract.cdc"
+	},
+	"networks": {
+		"emulator": "127.0.0.1:3569",
+		"mainnet": "access.mainnet.nodes.onflow.org:9000",
+		"testnet": "access.devnet.nodes.onflow.org:9000"
+	},
+	"accounts": {
+		"emulator-account": {
+			"address": "f8d6e0586b0a20c7",
+			"key": "f26a3bd65bdcc5fa1fe408bb554362927cc29f7cc08360dcf130b8679a7baf51"
+		},
+		"testnet-account": {
+			"address": "0xb3891e6782f0d790",
+			"key": {
+				"type": "hex",
+				"index": 0,
+				"signatureAlgorithm": "ECDSA_secp256k1",
+				"hashAlgorithm": "SHA3_256",
+				"privateKey": "90c29c630df6b6f841e2d1bd1b7b8b93d786c852bb3fc113a7362feb33016d07"
+			}
+		}
+	},
+	"deployments": {
+		"testnet": {
+			"testnet-account": [
+				"HelloWorld",
+				"SecondaryContract"
+			]
+		}
+	}
+}
